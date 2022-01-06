@@ -30,8 +30,14 @@
         </div> --}}
 
         <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl px-3 py-2">
-            <form action="#" method="GET">
-                <input type="text" name="search" placeholder="Find somthing"
+            <form action="/" method="GET">
+                @if (request('category'))
+                    <input type="hidden" name="category" value="{{ request('category') }}">
+                @endif
+
+                <input type="text"
+                    name="search"
+                    placeholder="Find somthing"
                     class="bg-transparent placeholder-black font-semibold text-sm"
                     value="{{ request('search') }}">
             </form>

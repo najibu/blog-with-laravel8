@@ -36,9 +36,10 @@
 
                     <div class="ml-3">
                         <h5 class="font-bold">
-                           {{ $post->author->name }}
+                          <a href="/?author={{ $post->author->username }}">
+                                {{ $post->author->name }}
+                            </a>
                         </h5>
-                        <h6>Mascot at Najibu</h6>
                     </div>
                 </div>
 
