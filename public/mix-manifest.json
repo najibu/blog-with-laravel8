@@ -1,15 +1,4 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/images/illustration-1.png": "/images/illustration-1.png",
-    "/images/illustration-2.png": "/images/illustration-2.png",
-    "/images/illustration-3.png": "/images/illustration-3.png",
-    "/images/illustration-4.png": "/images/illustration-4.png",
-    "/images/illustration-5.png": "/images/illustration-5.png",
-    "/images/lary-avatar.svg": "/images/lary-avatar.svg",
-    "/images/lary-head.svg": "/images/lary-head.svg",
-    "/images/lary-newsletter-icon.png": "/images/lary-newsletter-icon.png",
-    "/images/lary-newsletter-icon.svg": "/images/lary-newsletter-icon.svg",
-    "/images/logo.svg": "/images/logo.svg",
-    "/images/mailbox-icon.svg": "/images/mailbox-icon.svg"
+    "/css/app.css": "/css/app.css"
 }
