@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Post;
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\Container\BindingResolutionException;
 
 class PostController extends Controller
 {
+
+    /**
+     * @return View|Factory
+     * @throws BindingResolutionException
+     */
     public function index()
     {
         return view('posts.index', [
@@ -17,6 +23,11 @@ class PostController extends Controller
         ]);
     }
 
+    /**
+     * @param Post $post
+     * @return View|Factory
+     * @throws BindingResolutionException
+     */
     public function show(Post $post)
     {
         return view('posts.show', compact('post'));

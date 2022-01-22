@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Post extends Model
 {
@@ -13,21 +15,30 @@ class Post extends Model
 
     protected $with = ['category', 'author'];
 
+    /** @return BelongsTo  */
     public function category()
     {
         return $this->belongsTo(Category::class);
     }
 
+    /** @return BelongsTo  */
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    /** @return HasMany  */
     public function comments()
     {
         return $this->hasMany(Comment::class);
     }
 
+
+    /**
+     * @param mixed $query
+     * @param array $filters
+     * @return Builder
+     */
     public function scopeFilter($query, array $filters)
     {
         $query->when($filters['search'] ?? false, fn ($query, $search) =>
