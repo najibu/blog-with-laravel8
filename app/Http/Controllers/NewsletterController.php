@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\MailchimpNewsletter;
 use App\Services\Newsletter;
 use Illuminate\Routing\Redirector;
 use Illuminate\Http\RedirectResponse;
@@ -13,7 +14,7 @@ use Psr\Container\ContainerExceptionInterface;
 class NewsletterController extends Controller
 {
     /**
-     * @param Newsletter $newsletter
+     * @param MailchimpNewsletter $newsletter
      * @return Redirector|RedirectResponse
      * @throws BindingResolutionException
      * @throws ValidationException
